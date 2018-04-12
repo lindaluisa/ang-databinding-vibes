@@ -4,15 +4,19 @@
     <h5>Your vibe attracts your tribe.</h5>
     <hr>
     <label>Vibe's Name</label>
-    <input type="text" class="form-control" [(ngModel)]="newVibeName">
+    <!-- <input type="text" class="form-control" [(ngModel)]="newVibeName"> -->
+    <input 
+    type="text" 
+    class="form-control" 
+    #vibeNameInput>
     <label>Vibe's Content</label>
     <input type="text" class="form-control" [(ngModel)]="newVibeContent">
     <br>
     <button
       class="btn btn-primary"
-      (click)="onAddGoodVibe()">Add Good Vibe</button>
+      (click)="onAddGoodVibe(vibeNameInput)">Add Good Vibe</button>
     <button
       class="btn btn-primary"
-      (click)="onAddBadVibe()">Add Bad Vibe</button>
+      (click)="onAddBadVibe(vibeNameInput)">Add Bad Vibe</button>
   </div>
 </div>

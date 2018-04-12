@@ -8,7 +8,7 @@ import { Component, OnInit, EventEmitter, Output} from '@angular/core';
 export class VibeIndicationComponent implements OnInit {
   @Output() goodVibeCreated = new EventEmitter<{goodVibeName: string, goodVibeContent: string}>();
   @Output() badVibeCreated = new EventEmitter<{badVibeName: string, badVibeContent: string}>();
-  newVibeName = '';
+  // newVibeName = '';
   newVibeContent = '';
 
   constructor() { }
@@ -16,16 +16,18 @@ export class VibeIndicationComponent implements OnInit {
   ngOnInit() {
   }
 
-  onAddGoodVibe() {
+  // HTMLInputElement makes user that value property is recognized
+  onAddGoodVibe(nameInput: HTMLInputElement) {
+    // console.log(nameInput);
     this.goodVibeCreated.emit({
-      goodVibeName: this.newVibeName,
+      goodVibeName: nameInput.value,
       goodVibeContent: this.newVibeContent
     });
   }
 
-  onAddBadVibe() {
+  onAddBadVibe(nameInput: HTMLInputElement) {
     this.badVibeCreated.emit({
-      badVibeName: this.newVibeName,
+      badVibeName: nameInput.value,
       badVibeContent: this.newVibeContent
     })
   }

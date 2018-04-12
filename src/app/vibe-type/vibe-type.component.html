@@ -1,11 +1,17 @@
-
 <div
   class="panel panel-default">
-  <div class="panel-heading">{{ element.name }}</div>
+  <div class="panel-heading">
+    {{ element.name }}
+  </div>
+
   <div class="panel-body">
     <p>
-      <strong *ngIf="element.type === 'good-vibe'" style="color: rgb(226, 15, 61)">{{ element.content }}</strong>
-      <strong *ngIf="element.type === 'bad-vibe'">{{ element.content }}</strong>
+      <strong *ngIf="element.type === 'good-vibe'" style="color: rgb(226, 15, 61)">
+        {{ element.content }}
+      </strong>
+      <strong *ngIf="element.type === 'bad-vibe'">
+        {{ element.content }}
+      </strong>
     </p>
   </div>
 </div>
