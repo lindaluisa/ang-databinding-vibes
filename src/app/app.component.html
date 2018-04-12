@@ -6,9 +6,22 @@
   <hr>
     <div class="row">
       <div class="col-xs-12">
-        <app-vibe-type 
-        *ngFor="let vibeElement of vibeElements"
-        [element]="vibeElement"></app-vibe-type>
+        <button class="btn btn-primary" (click)="onChangeFirst()">Change First Element</button>
+        <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first Component</button>
+          <app-vibe-type
+          *ngFor="let vibeElement of vibeElements"
+          [element]="vibeElement"
+          [name]="vibeElement.name"> 
+          <!-- passing data  -->
+          <p>
+            <strong *ngIf="vibeElement.type === 'good-vibe'" style="color: rgb(226, 15, 61)">
+              {{ vibeElement.content }}
+            </strong>
+            <strong *ngIf="vibeElement.type === 'bad-vibe'">
+              {{ vibeElement.content }}
+            </strong>
+          </p>
+        </app-vibe-type>
       </div>
     </div>
   </div>

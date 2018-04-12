@@ -24,4 +24,14 @@ export class AppComponent {
       content: badVibeData.badVibeContent
     });
   }
+
+  // access first element 
+  onChangeFirst() {
+     this.vibeElements[0].name = 'Changed!';
+  }
+
+//splicing at first element and therefore removing it
+  onDestroyFirst() {
+    this.vibeElements.splice(0,1);
+  }
 }
