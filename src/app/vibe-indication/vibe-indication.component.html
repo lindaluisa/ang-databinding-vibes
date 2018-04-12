@@ -10,7 +10,11 @@
     class="form-control" 
     #vibeNameInput>
     <label>Vibe's Content</label>
-    <input type="text" class="form-control" [(ngModel)]="newVibeContent">
+    <!-- <input type="text" class="form-control" [(ngModel)]="newVibeContent"> -->
+    <input 
+      type="text"  
+      class="form-control" 
+      #vibeContentInput>
     <br>
     <button
       class="btn btn-primary"
